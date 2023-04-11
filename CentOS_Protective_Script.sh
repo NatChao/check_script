@@ -27,6 +27,16 @@ if [ -f /etc/centos-release ];then
     fi
 fi
 
+if [ -f /etc/lsb-release ];then
+    grep -i 'ubuntu' /etc/lsb-release > /dev/null
+    if [ $? == 0 ];then
+        ostype='ubuntu'
+    fi
+fi
+
+if [ -f /System/Library/CoreServices/SystemVersion.plist ];then
+    ostype='macOS'
+fi
     echo -e "###########################################################################################"
     echo -e "\033[1;31m	    OS type is $ostype	    \033[0m"
     echo -e "###########################################################################################"
