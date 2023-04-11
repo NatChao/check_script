@@ -1,9 +1,9 @@
 # Linux服务器等保加固脚本/检测脚本
 
 
-#这脚本程序是我在一位的开源xiaoyunjie老哥写的脚本加固基础上新增了两个加固脚本，设置密码长度和定期更换要求、建议操作系统对审计记录进行保护，通过日志服务器对审计记录进行定期存档备份
+这脚本程序是我在一位的开源xiaoyunjie老哥写的脚本加固基础上新增了两个加固脚本，设置密码长度和定期更换要求、建议操作系统对审计记录进行保护，通过日志服务器对审计记录进行定期存档备份
 
-#他的加固脚本github项目地址https://github.com/xiaoyunjie/Shell_Script
+他的加固脚本github项目地址https://github.com/xiaoyunjie/Shell_Script
 
 
 ## Check_Script
@@ -13,10 +13,13 @@
 #执行CentOS-Check_Script.sh脚本文件进行检查,命令格式如下
 sudo sh CentOS_Check_Script.sh | tee check_`date +%Y%m%d_%H%M%S`.txt
 ```
-#执行完CentOS_Check_Script.sh会在当前目录下生成以当前时间单位命名的txt检查结果文件(check_2023.xxxxx_xxxx.txt)
-#这个检查脚本好像对Ubuntu系统没啥作用，因为Ubuntu系统有些配置文件和检测脚本的文件不一样或者不存在。
+执行完CentOS_Check_Script.sh会在当前目录下生成以当前时间单位命名的txt检查结果文件(check_2023.xxxxx_xxxx.txt)
+
+这个检查脚本好像对Ubuntu系统没啥作用，因为Ubuntu系统有些配置文件和检测脚本的文件不一样或者不存在。
 
 
+
+----
 **检查说明**
 此脚本是按三级等保要求，编写的一键检查脚本，此脚本只适合linux分支中的redhat、centos，运行脚本将结果输出到自定义的文件中，脚本结果需要人为检查。
 
